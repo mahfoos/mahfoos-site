@@ -8,7 +8,7 @@ import { siteConfig, socialLinks } from "@/lib/data";
 
 export function Contact() {
   return (
-    <section id="contact" className="relative py-24 sm:py-32">
+    <section id="contact" className="relative py-16 sm:py-28">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -17,8 +17,8 @@ export function Contact() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="glass relative overflow-hidden rounded-[2rem] p-8 text-center sm:p-14"
         >
-          <div className="pointer-events-none absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/25 blur-[100px]" />
-          <div className="pointer-events-none absolute bottom-0 right-0 h-60 w-60 rounded-full bg-accent/20 blur-[100px]" />
+          <div className="pointer-events-none absolute -top-24 left-1/2 hidden h-72 w-72 -translate-x-1/2 rounded-full bg-primary/25 blur-[100px] sm:block" />
+          <div className="pointer-events-none absolute bottom-0 right-0 hidden h-60 w-60 rounded-full bg-accent/20 blur-[100px] sm:block" />
 
           <div className="relative">
             <span className="inline-flex items-center gap-2 rounded-full border border-border-soft bg-card px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-accent backdrop-blur-md">

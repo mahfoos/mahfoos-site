@@ -17,8 +17,13 @@ export const siteConfig = {
   linkedin: "https://www.linkedin.com/in/mahfoos-ahamed",
   github: "https://github.com/mahfoosahamed",
   medium: "https://mahfoozahamed.medium.com",
-  resume: "/resume.pdf",
+  resume:
+    "https://drive.google.com/uc?export=download&id=1dWnB7G_J4w3fXRzS-yo_JGeeNZ7aMADF",
+  resumeView:
+    "https://drive.google.com/file/d/1dWnB7G_J4w3fXRzS-yo_JGeeNZ7aMADF/view",
   image: "/images/mahfoos.jpg",
+  booking:
+    "mailto:umahfoosahamed@gmail.com?subject=Booking%20a%201%3A1%20session&body=Hi%20Mahfoos%2C%0A%0AI%27d%20like%20to%20book%20a%20session%20about%3A%0A%0A(mentorship%20%2F%20consulting%20%2F%20code%20review%20%2F%20project%20help)%0A%0AThanks!",
 };
 
 export const navLinks = [
@@ -26,6 +31,7 @@ export const navLinks = [
   { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Services", href: "#services" },
   { label: "Education", href: "#education" },
   { label: "Blog", href: "#blog" },
   { label: "Contact", href: "#contact" },
@@ -247,6 +253,46 @@ export const education = [
     degree: "BEng (Hons) Software Engineering",
     school: "University of Westminster",
     note: "Second Upper Class",
+  },
+];
+
+export type Service = {
+  title: string;
+  description: string;
+  points: string[];
+  icon: string;
+  featured?: boolean;
+};
+
+export const services: Service[] = [
+  {
+    title: "1:1 Mentorship",
+    description:
+      "Personalised guidance for students and early-career engineers. Career direction, a clear skills roadmap, and honest, practical feedback.",
+    points: ["Career & growth advice", "Skill roadmaps", "Honest code feedback"],
+    icon: "mentorship",
+    featured: true,
+  },
+  {
+    title: "Technical Consulting",
+    description:
+      "Architecture, cloud-native, Kubernetes, and DevOps advisory for teams and startups building systems that need to scale.",
+    points: ["System & cloud architecture", "Kubernetes & DevOps", "Scalability reviews"],
+    icon: "consulting",
+  },
+  {
+    title: "Code & Architecture Reviews",
+    description:
+      "A senior pair of eyes on your codebase, system design, or infrastructure, with clear, actionable recommendations.",
+    points: ["Codebase audit", "Design feedback", "Best-practice fixes"],
+    icon: "review",
+  },
+  {
+    title: "Project & Interview Prep",
+    description:
+      "Mock interviews, project supervision, and hands-on help getting your final-year or side project across the line.",
+    points: ["Mock interviews", "Project supervision", "Hands-on guidance"],
+    icon: "prep",
   },
 ];
 

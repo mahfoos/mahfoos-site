@@ -19,8 +19,8 @@ export function Projects() {
       : projects.filter((p) => p.category === active);
 
   return (
-    <section id="projects" className="relative py-24 sm:py-32">
-      <div className="pointer-events-none absolute right-0 top-1/4 h-96 w-96 rounded-full bg-accent/10 blur-[120px]" />
+    <section id="projects" className="relative py-16 sm:py-28">
+      <div className="pointer-events-none absolute right-0 top-1/4 hidden h-96 w-96 rounded-full bg-accent/10 blur-[120px] sm:block" />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Featured Work"

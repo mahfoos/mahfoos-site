@@ -81,11 +81,18 @@ body {
 }
 
 @layer utilities {
+  /* Mobile: solid card (no backdrop-filter — the biggest mobile perf cost).
+     Desktop: real glassmorphism with backdrop blur. */
   .glass {
-    background: var(--card);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: var(--background-elevated);
     border: 1px solid var(--border);
+  }
+  @media (min-width: 768px) {
+    .glass {
+      background: var(--card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
   }
 
   .text-gradient {

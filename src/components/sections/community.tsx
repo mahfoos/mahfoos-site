@@ -9,8 +9,8 @@ const icons: LucideIcon[] = [GraduationCap, Users2, Lightbulb, Mic];
 
 export function Community() {
   return (
-    <section id="community" className="relative py-24 sm:py-32">
-      <div className="pointer-events-none absolute left-1/4 top-0 h-80 w-80 rounded-full bg-primary/10 blur-[120px]" />
+    <section id="community" className="relative py-16 sm:py-28">
+      <div className="pointer-events-none absolute left-1/4 top-0 hidden h-80 w-80 rounded-full bg-primary/10 blur-[120px] sm:block" />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Community & Teaching"

@@ -8,7 +8,7 @@ import { blogPosts, siteConfig } from "@/lib/data";
 
 export function Blog() {
   return (
-    <section id="blog" className="relative py-24 sm:py-32">
+    <section id="blog" className="relative py-16 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Writing"

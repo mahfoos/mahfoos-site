@@ -7,8 +7,8 @@ import { experiences } from "@/lib/data";
 
 export function Experience() {
   return (
-    <section id="experience" className="relative py-24 sm:py-32">
-      <div className="pointer-events-none absolute left-1/2 top-1/3 h-96 w-96 -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]" />
+    <section id="experience" className="relative py-16 sm:py-28">
+      <div className="pointer-events-none absolute left-1/2 top-1/3 hidden h-96 w-96 -translate-x-1/2 rounded-full bg-primary/10 blur-[120px] sm:block" />
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Experience"

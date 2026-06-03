@@ -54,8 +54,8 @@ export function Hero() {
     >
       {/* Background */}
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-60 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
-      <div className="pointer-events-none absolute -top-40 left-1/2 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full bg-primary/20 blur-[120px]" />
-      <div className="pointer-events-none absolute bottom-0 right-0 h-[30rem] w-[30rem] rounded-full bg-accent/15 blur-[120px]" />
+      <div className="pointer-events-none absolute -top-40 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-primary/20 blur-3xl sm:h-[40rem] sm:w-[40rem] sm:blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 right-0 hidden h-[30rem] w-[30rem] rounded-full bg-accent/15 blur-[120px] sm:block" />
 
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr]">
         <motion.div variants={container} initial="hidden" animate="show">
@@ -99,7 +99,7 @@ export function Hero() {
                 View Projects <ArrowRight />
               </Button>
             </a>
-            <a href={siteConfig.resume} download>
+            <a href={siteConfig.resume} target="_blank" rel="noreferrer">
               <Button variant="outline" size="lg">
                 <Download /> Download Resume
               </Button>
@@ -155,12 +155,12 @@ export function Hero() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           className="relative mx-auto w-full max-w-sm lg:max-w-none"
         >
-          {/* Rotating gradient glow ring */}
+          {/* Rotating gradient glow ring (desktop only — expensive on mobile) */}
           <motion.div
             aria-hidden
             animate={{ rotate: 360 }}
             transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-            className="absolute -inset-5 rounded-[2.25rem] opacity-70 blur-2xl"
+            className="absolute -inset-5 hidden rounded-[2.25rem] opacity-70 blur-2xl sm:block"
             style={{
               background:
                 "conic-gradient(from 0deg, #2563eb, #06b6d4, #2563eb, #06b6d4, #2563eb)",
@@ -181,18 +181,18 @@ export function Hero() {
                 alt="Mahfoos Ahamed"
                 fill
                 priority
-                quality={100}
-                sizes="(max-width: 1024px) 80vw, 460px"
+                quality={85}
+                sizes="(max-width: 1024px) 90vw, 460px"
                 className="object-cover object-[50%_20%] brightness-110 contrast-105 saturate-110"
               />
               {/* subtle bottom-only fade so the card stays legible without dimming the face */}
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-secondary/85 to-transparent" />
-              {/* soft scan-line tech sheen */}
+              {/* soft scan-line tech sheen (desktop only) */}
               <motion.div
                 aria-hidden
                 animate={{ y: ["-120%", "120%"] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", repeatDelay: 2 }}
-                className="absolute inset-x-0 h-1/3 bg-gradient-to-b from-transparent via-accent/15 to-transparent"
+                className="absolute inset-x-0 hidden h-1/3 bg-gradient-to-b from-transparent via-accent/15 to-transparent sm:block"
               />
             </div>
 

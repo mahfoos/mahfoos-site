@@ -7,7 +7,7 @@ import { certifications, education } from "@/lib/data";
 
 export function Education() {
   return (
-    <section id="education" className="relative py-24 sm:py-32">
+    <section id="education" className="relative py-16 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Credentials"
